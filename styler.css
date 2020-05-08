@@ -1,0 +1,46 @@
+h2, h3 {
+  color: red;
+}
+
+h2 {
+  padding: 15px;
+  border-bottom: 2px solid black;
+}
+
+a, #Con {
+  font-weight: bold;
+}
+
+table, th, td {
+  border: 1px solid black;
+  font-family: arial, sans-serif;
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: gray;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+}
+
+#headShot {
+  display: block;
+  width: auto;
+  height: auto;
+}
+
+.Content {
+  box-sizing: content-box;
+  width: 100px;
+  border: 1px solid black;
+  margin-left: 10px;
+  margin-top: 0;
+}
+
+#Con {
+  margin-top: 10px;
+}
