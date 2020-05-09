@@ -2,6 +2,10 @@ h2, h3 {
   color: red;
 }
 
+body {
+  background-color: #F5F5F5 !important;
+}
+
 h2 {
   padding: 15px;
   border-bottom: 2px solid black;
@@ -21,6 +25,10 @@ tr:nth-child(even) {
   background-color: gray;
 }
 
+h3, p {
+  padding: 0 10px;
+}
+
 .center {
   margin-left: auto;
   margin-right: auto;
@@ -33,14 +41,36 @@ tr:nth-child(even) {
   height: auto;
 }
 
-.Content {
-  box-sizing: content-box;
-  width: 100px;
-  border: 1px solid black;
-  margin-left: 10px;
-  margin-top: 0;
-}
-
 #Con {
   margin-top: 10px;
+}
+
+@media (max-width:600px) {
+  .Content {
+    box-sizing: content-box;
+    width: 100px;
+    border: 1px solid black;
+    margin: auto;
+  }
+}
+
+@media (min-width:601px) {
+  #Con {
+    visibility: hidden;
+    display: none;
+  }
+
+  li {
+    display: inline;
+    font-size: 125%;
+    padding: 150px;
+  }
+
+  .Content {
+    list-style-type: none;
+    border: 1px solid black;
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+  }
 }
