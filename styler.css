@@ -26,7 +26,7 @@ tr:nth-child(even) {
 }
 
 h3, p {
-  padding: 0 10px;
+  padding: 5px 10px;
 }
 
 .center {
@@ -43,34 +43,22 @@ h3, p {
 
 #Con {
   margin-top: 10px;
+  text-align: center;
 }
 
 @media (max-width:600px) {
-  .Content {
-    box-sizing: content-box;
-    width: 100px;
+  .nav {
     border: 1px solid black;
-    margin: auto;
   }
 }
 
 @media (min-width:601px) {
   #Con {
-    visibility: hidden;
     display: none;
   }
 
-  li {
-    display: inline;
-    font-size: 125%;
-    padding: 150px;
-  }
-
-  .Content {
-    list-style-type: none;
+  .nav {
     border: 1px solid black;
-    text-align: center;
-    margin: 0;
-    padding: 10px;
+    border-bottom: 1px solid black;
   }
 }
