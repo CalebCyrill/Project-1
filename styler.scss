@@ -1,20 +1,53 @@
-h2, h3 {
-  color: red;
+$defaultBorder: 1px solid black;
+$defaultFont: arial sans-serif;
+$defaultWeight: bold;
+$paddingH3: 5px 10px;
+$headingColor: red;
+
+%tableBorder {
+  border: $defaultBorder;
+  font-family: $defaultFont;
+  font-weight: $defaultWeight;
 }
 
-h2 {
-  padding: 15px;
-  border-bottom: 2px solid black;
+%paragraph {
+  padding: $paddingH3;
+  font-family: $defaultFont;
+  font-size: 20px;
 }
 
-a, #Con {
-  font-weight: bold;
+body {
+  background-color: #F5F5F5 !important;
+
+  h3 {
+    color: $headingColor;
+    padding: $paddingH3;
+  }
+
+  h2 {
+    color: $headingColor;
+    padding: 15px;
+    border-bottom: $defaultBorder;
+  }
+
+  p {
+    @extend %paragraph;
+  }
 }
 
-table, th, td {
-  border: 1px solid black;
-  font-family: arial, sans-serif;
-  font-weight: bold;
+a {
+  font-size: 23px;
+  font-weight: $defaultWeight;
+}
+
+table {
+  th {
+    @extend %tableBorder;
+  }
+
+  td {
+    @extend %tableBorder;
+  }
 }
 
 tr:nth-child(even) {
@@ -32,13 +65,14 @@ tr:nth-child(even) {
   width: auto;
   height: auto;
 }
-
-
-
-#Con {
-  margin-top: 10px;
+@media (max-width:600px) {
+  .nav {
+    border: $defaultBorder;
+  }
 }
-
-@media (max-width: 600px){
-  
+@media (min-width:601px) {
+  .nav {
+    border: $defaultBorder;
+    border-bottom: $defaultBorder;
+  }
 }
